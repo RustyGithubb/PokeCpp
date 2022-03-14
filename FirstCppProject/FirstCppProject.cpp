@@ -5,9 +5,30 @@
 
 using namespace std;
 
+void Damage(int health) {
+    health -= 2; 
+}
+
+void DamageReference(int& health) {
+    health -= 2;
+}
+
+void DamagePointedObject(int* health) {
+    *health -= 3;
+}
+
+
 int main()
 {
     cout << "Hello World!\n";
+    int life = 10;
+    cout << "The value " << life << " is stored at memory adress : " << &life << endl;
+    Damage(life);
+    cout << life << endl;
+    DamageReference(life);
+    cout << life << endl;
+    DamagePointedObject(&life);
+    cout << life << endl;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
