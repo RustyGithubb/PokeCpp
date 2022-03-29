@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -42,6 +43,26 @@ void ShowMultiDimensionalMap()
     
 }
 
+void ShowVector()
+{
+    vector<float> grades(20, 10);
+    grades[5] = 12;
+    grades[18] = 7;
+    for (int i = 0; i < grades.size(); i++)
+    {
+        cout << grades[i] << " ; ";
+    }
+    cout << endl;
+    grades.push_back(15);
+    grades.push_back(12);
+    grades.push_back(17);
+    grades.pop_back();
+    for (int i = 0; i < grades.size(); i++)
+    {
+        cout << grades[i] << " ; ";
+    }
+}
+
 
 int main()
 {
@@ -55,7 +76,7 @@ int main()
     DamagePointedObject(&life);
     cout << life << endl;
 
-    ShowMultiDimensionalMap();
-
+    //ShowMultiDimensionalMap();
+    ShowVector();
 }
 
