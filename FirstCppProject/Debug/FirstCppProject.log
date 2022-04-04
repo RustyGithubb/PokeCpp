@@ -1,2 +1,6 @@
 ﻿  FirstCppProject.cpp
+C:\Users\Marie\source\repos\Aenorya\PokeCpp\FirstCppProject\FirstCppProject.cpp(62,23): warning C4018: '<' : incompatibilité signed/unsigned
+C:\Users\Marie\source\repos\Aenorya\PokeCpp\FirstCppProject\FirstCppProject.cpp(71,23): warning C4018: '<' : incompatibilité signed/unsigned
+  Pokemon.cpp
+  Génération de code en cours...
   FirstCppProject.vcxproj -> C:\Users\Marie\Source\Repos\Aenorya\PokeCpp\Debug\FirstCppProject.exe
