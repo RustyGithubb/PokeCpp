@@ -97,12 +97,18 @@ int main()
     ShowMultiDimensionalMap();
     //ShowVector();
     cout << "============PIKACHU=============\n";
-    Pokemon pikachu = Pokemon("Pikachu", "a yellow electric mouse", 20);
+    Pokemon pikachu = Pokemon("Pikachu", "chunky boi", 40);
     pikachu.DisplaySumUp();
     cout << "=========================\n";
-    pikachu.mPetName = "Pika Pika";
+    pikachu.petName = "Pika Pika";
     pikachu.Hurt(6);
     pikachu.Heal(12);
     pikachu.DisplaySumUp();
+    Ability thunderShock = Ability("Thunder Shock", "Goes bzzzz", 20, 2);
+    Ability gnaw = Ability("Gnaw", "Gnaws", 10);
+    Ability cutie = Ability("Cutie Pie", "2 Cute 2 be true", 10);
+    pikachu.LearnAbility(thunderShock);
+    pikachu.LearnAbility(gnaw);
+    pikachu.LearnAbility(cutie);
 }
 
