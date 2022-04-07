@@ -109,6 +109,22 @@ void Pokemon::DisplayAbilities()
 		<<" | dmg : "<<mAbilities[a].GetDamages()<<" hp.\n";
 	}
 }
+int Pokemon::GetAbilityCount()
+{
+	return mAbilities.size();
+}
+Ability Pokemon::GetAbility(int index)
+{
+	if (index > 0 && index < mAbilities.size()) {
+		return mAbilities[index];
+	}
+	return Ability();
+}
+void Pokemon::Attack(Pokemon& target, int ability)
+{
+	cout << petName << " attacks " << target.petName << " with " << mAbilities[ability].GetName() << endl;
+	target.Hurt(mAbilities[ability].GetDamages());
+}
 //Add attack
 
 void Pokemon::DisplaySumUp()

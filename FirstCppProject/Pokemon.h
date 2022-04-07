@@ -29,7 +29,11 @@ public:
 	//Add learn ability
 	void LearnAbility(Ability ability);
 	void DisplayAbilities();
+	int GetAbilityCount();
+	//Add getability from index
+	Ability GetAbility(int index);
 	//Add attack
+	void Attack(Pokemon& target, int ability);
 
 	void DisplaySumUp();
 

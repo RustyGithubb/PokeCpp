@@ -5,6 +5,8 @@
 #include <vector>
 #include "Pokemon.h"
 #include "Utils.h"
+#include "Battle.h"
+
 
 using namespace std;
 
@@ -40,5 +42,12 @@ int main()
     pikachu.LearnAbility(thunderShock);
     pikachu.LearnAbility(gnaw);
     pikachu.LearnAbility(cutie);
+
+    Pokemon stari = Pokemon("Staryu", "A cute starfish", 30);
+    stari.LearnAbility(Ability("Splash", "It's wet", 13));
+    stari.LearnAbility(Ability("Water Jet", "It's wetter", 15));
+
+    Battle fight (pikachu, stari);
+    fight.StartBattle();
 }
 
