@@ -13,7 +13,7 @@ private:
 	std::vector<Ability> mAbilities;
 public:
 	std::string petName;
-	const int maxAbilitiesCount = 2;
+	const int MAX_ABILITIES = 4;
 	Pokemon();
 	Pokemon(std::string name, std::string desc, int maxLifePoints);
 	//Add constructor with abilities parameter

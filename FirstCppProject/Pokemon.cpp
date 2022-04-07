@@ -76,14 +76,14 @@ void Pokemon::Heal(int points)
 //Add learn ability
 void Pokemon::LearnAbility(Ability ability)
 {
-	if(mAbilities.size() < maxAbilitiesCount)
+	if(mAbilities.size() < MAX_ABILITIES)
 	{
 		//I can add ability
 		mAbilities.push_back(ability);
 		cout << mName << " learned : " << ability.GetName()<<endl;
 	} else
 	{
-		cout << mName << " already knows " << maxAbilitiesCount << " abilities.\n";
+		cout << mName << " already knows " << MAX_ABILITIES << " abilities.\n";
 		//TODO choose ability to replace
 		int choice = 0;
 		do
@@ -91,7 +91,7 @@ void Pokemon::LearnAbility(Ability ability)
 			DisplayAbilities();
 			cout << "Which one do you want to replace ?";
 			cin >> choice;
-		} while (choice <= 0 || choice > maxAbilitiesCount);
+		} while (choice <= 0 || choice > MAX_ABILITIES);
 		mAbilities[choice - 1] = ability;
 		cout << "Ability was replaced with success.\n";
 	}
